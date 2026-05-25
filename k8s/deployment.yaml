@@ -22,7 +22,7 @@ spec:
       containers:
       - name: hackathon-app
 
-        image: demoacrci.azurecr.io/hackathon-app:latest
+        image: demoacrci-c5b0gfffc5b0g9fk.azurecr.io/hackathon-app:latest
 
         ports:
         - containerPort: 3000
