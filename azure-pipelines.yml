@@ -18,7 +18,7 @@ stages:
       displayName: Build and Push Docker Image
 
       inputs:
-        containerRegistry: 'demo-azure-connection'
+        containerRegistry: 'demo-azure-acr-connection'
         repository: 'hackathon-app'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
@@ -43,7 +43,7 @@ stages:
       inputs:
         action: deploy
 
-        kubernetesServiceConnection: 'demo-azure-connection'
+        kubernetesServiceConnection: 'demo-azure-aks-connection'
 
         namespace: hackathon
 
