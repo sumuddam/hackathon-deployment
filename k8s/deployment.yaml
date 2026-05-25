@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+  name: hackathon-app
+  namespace: hackathon
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: hackathon-app
+
+  template:
+    metadata:
+      labels:
+        app: hackathon-app
+
+    spec:
+      containers:
+      - name: hackathon-app
+
+        image: demoacrci.azurecr.io/hackathon-app:latest
+
+        ports:
+        - containerPort: 3000
